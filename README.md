@@ -92,3 +92,55 @@ css폴더안에 있는 styles.css 파일을 html코드안에 링크를 건다.
 .status-bar{        }
 ```
 
+5. reset css      (https://cssdeck.com/blog/scripts/eric-meyer-reset-css/)
+
+(우리가 원하지않아도 브라우저가 알아서 html에 적용시키는 스타일을 없앨수있다
+
+대부분의 태그에  margin:0, padding:0, border:0등을 가진 css파일이다)
+
+```html
+@import "reset.css";
+```
+
+@import -> styles.css에 reset.css 파일을 추가하기
+
+6. 글자 두줄로 만들기
+
+```html
+.welcome-header__text {
+  width: 50%;
+}
+```
+
+7. flex-direction: column; 은 좌우로 말고 위아래로 놓여있게하기위해서(반대로)  
+
+8. align-items: center; 은 교차축을 이용해 센터에 위치하게 만들어줌
+9. not  (뭔가가 적용되는 걸 원하지 않을때)
+
+```html
+#longin-form input:not([type="submit"]) {
+  border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+  transition: border-color 0.3s ease-in-out;
+}
+```
+
+submit 아닐때만 밑에 코드를 적용시킨다라는 뜻
+
+10. Cursor (포인터 모양을 다르게 해줌)
+
+```html
+ cursor: pointer;
+```
+
+11.  inherit (부모로 부터 색상을 상속받아 기본 링크의 블루색상을 부모의 색으로 바꿔줌)
+
+```html
+#longin-form a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+```
+
+
+
