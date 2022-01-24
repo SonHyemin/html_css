@@ -6,7 +6,11 @@
 
 - 무료아이콘
   https://heroicons.dev/
-  https://fontawesome.com/start (유료로 사용할거면 이메일주면됨,
+  https://fontawesome.com/v5.15/icons?d=gallery&p=2&q=user (유료로 사용할거면 이메일주면됨,
+
+- https://fontawesome.com/v5.15/how-to-use/on-the-web/styling/sizing-icons
+  
+  (아이콘의 사이즈를 볼수있음)
 
   무료로할거면 밑에 코드 복붙해서 body 마지막!에 넣기-무료아이콘 찾아서 코드 복사해서 html에 붙여넣기)
 
@@ -36,6 +40,10 @@ https://abcdqbbq.tistory.com/9 :reset css이다 브라우저의 스타일을 없
 ( VSC비주얼에서 .gitignore 라는 파일 만들기(무시하고 싶은 파일 이름을 기록하는 파일임)-
 
 코드에 무시하고싶은 파일이름 적기(폴더면 /붙이고 적기) )
+
+- styles.css 파일에는 모든 화면에 적용되는 css를 넣도록 하자 다른것들은 따로 
+
+  @import하기 
 
 ## index
 
@@ -142,5 +150,114 @@ submit 아닐때만 밑에 코드를 적용시킨다라는 뜻
 }
 ```
 
+## Scend p. 
 
+1. form action="friends.html" method="get"
+
+action: 어떤 페이지로 data를 보낼건지 지정
+
+method: 2가지방식있음 POST(백엔드 서버에 정보를 전송)/ GET(보안에 취약함)
+
+2. nav (navigation)
+
+```html
+<body>
+<nav>
+        <ul>
+            <li>
+                <a href=""></a>
+            </li>
+        </ul>
+    </nav>
+</body>
+```
+
+ 보통 nav는 이런식으로 코드가 짜여져 있다
+
+2-1.   VSC단축키(shortcut)            
+
+```html
+ <nav>
+        <ul>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+            <li><a href=""></a></li>
+        </ul>
+    </nav>
+```
+
+ nav>ul>li*4>a     한문장만 쓰면 유효한 html을 만들어줌
+
+3. 파일의 순서를 지키는게 정말 중요함
+
+```html
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+@import "reset.css";
+@import "variables.css";
+/* components */
+@import "components/status-bar.css";
+@import "components/nav-bar.css";
+/* screens */
+@import "screens/login.css";
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+```
+
+첫줄에는 font를 import 하고 그다음에는 style를 reset하고 그리고 variables.css를 import하였다.(순서가 바뀌면 적용이 안됨 늦게 import의 우선순위가 바뀌기 때문)
+
+4.  box-sizing: border-box;
+
+```html
+.nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f9f9fa;
+  padding: 20px 50px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(177, 177, 177, 0.2);
+}
+```
+
+css에게 padding 20px 50px를 적용했지만 나의 box사이즈를 늘리지 말고 
+
+그대로 둬라고 명령하는것 (padding값만큼 내box를 늘리지 말라고하는 것임)
+
+5.  position: absolute; 를 쓰기위한 조건
+
+```html
+.nav__link {
+  position: relative;
+  color: #2f363e;
+}
+
+.nav__notification {
+  background-color: tomato;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+}
+```
+nav__notification을 감싸고있는 nav_link(container)에게 position:relativ를 적용해준다
+
+왜냐하면  body중심으로 움직인것을 가장가까운 부모기준으로 바꿔줘야 적용이되기때문
+
+6. icon 은 text라고 생각하면됨  (아이콘의 색 바꿀때)
+
+```html
+#friends-display-link i{
+    color: rgba(0, 0, 0, 0.3);
+}
+```
 
