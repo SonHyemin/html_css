@@ -150,7 +150,7 @@ submit 아닐때만 밑에 코드를 적용시킨다라는 뜻
 }
 ```
 
-## Scend p. 
+## Screen 2. 
 
 1. form action="friends.html" method="get"
 
@@ -260,4 +260,15 @@ nav__notification을 감싸고있는 nav_link(container)에게 position:relativ�
     color: rgba(0, 0, 0, 0.3);
 }
 ```
+
+7. VSC 단축키  
+
+```html
+<div class="user-component__column"></div>
+<div class="user-component__column"></div>
+```
+
+ .user-component__column*2 을 입력하면 바로 코드를 만들어줌
+
+## Screen 3. 
 
