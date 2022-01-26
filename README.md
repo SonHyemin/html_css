@@ -272,3 +272,10 @@ nav__notification을 감싸고있는 nav_link(container)에게 position:relativ�
 
 ## Screen 3. 
 
+1. 하나의 element에게 두개의 class를 가지는 경우
+
+```html
+<span class="nav__notification badge">1</span>
+```
+
+nav__notification 와 badge 이다
