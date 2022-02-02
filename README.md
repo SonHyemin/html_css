@@ -106,7 +106,7 @@ css폴더안에 있는 styles.css 파일을 html코드안에 링크를 건다.
 
 대부분의 태그에  margin:0, padding:0, border:0등을 가진 css파일이다)
 
-```html
+```css
 @import "reset.css";
 ```
 
@@ -114,7 +114,7 @@ css폴더안에 있는 styles.css 파일을 html코드안에 링크를 건다.
 
 6. 글자 두줄로 만들기
 
-```html
+```css
 .welcome-header__text {
   width: 50%;
 }
@@ -125,7 +125,7 @@ css폴더안에 있는 styles.css 파일을 html코드안에 링크를 건다.
 8. align-items: center; 은 교차축을 이용해 센터에 위치하게 만들어줌
 9. not  (뭔가가 적용되는 걸 원하지 않을때)
 
-```html
+```css
 #longin-form input:not([type="submit"]) {
   border-bottom: 1px solid rgb(0, 0, 0, 0.2);
   transition: border-color 0.3s ease-in-out;
@@ -136,13 +136,13 @@ submit 아닐때만 밑에 코드를 적용시킨다라는 뜻
 
 10. Cursor (포인터 모양을 다르게 해줌)
 
-```html
+```css
  cursor: pointer;
 ```
 
 11.  inherit (부모로 부터 색상을 상속받아 기본 링크의 블루색상을 부모의 색으로 바꿔줌)
 
-```html
+```css
 #longin-form a {
   text-align: center;
   text-decoration: none;
@@ -191,7 +191,7 @@ method: 2가지방식있음 POST(백엔드 서버에 정보를 전송)/ GET(보�
 
 3. 파일의 순서를 지키는게 정말 중요함
 
-```html
+```css
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
 @import "reset.css";
 @import "variables.css";
@@ -210,7 +210,7 @@ body {
 
 4.  box-sizing: border-box;
 
-```html
+```css
 .nav {
   position: fixed;
   bottom: 0;
@@ -228,7 +228,7 @@ css에게 padding 20px 50px를 적용했지만 나의 box사이즈를 늘리지 
 
 5.  position: absolute; 를 쓰기위한 조건
 
-```html
+```css
 .nav__link {
   position: relative;
   color: #2f363e;
@@ -255,7 +255,7 @@ nav__notification을 감싸고있는 nav_link(container)에게 position:relativ�
 
 6. icon 은 text라고 생각하면됨  (아이콘의 색 바꿀때)
 
-```html
+```css
 #friends-display-link i{
     color: rgba(0, 0, 0, 0.3);
 }
@@ -279,3 +279,50 @@ nav__notification을 감싸고있는 nav_link(container)에게 position:relativ�
 ```
 
 nav__notification 와 badge 이다
+
+2. span 은 line 이라 margin이 적용이 안됨  (block로 적용해야됨)
+
+```css
+.recommended-friends span {
+  margin: 110px 0;
+  display: block;
+  text-align: center;
+}
+```
+
+3. 모든 글자를 대문자로 만든다 
+
+```css
+.open-post__hashtags {
+  text-transform: uppercase;
+}
+```
+
+4.  class 지정하는 또다른 방법   (open-post__members안에있는 divider 이다)
+
+```css
+.open-post__members .divider{    }
+```
+
+5.  position: absolute;
+
+```css
+.open-post__photo {
+  position: relative;
+}
+.open-post__heart-count {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  border-radius: 20px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+}
+```
+
+ position: absolute; 를  적용한 코드에서 relative father을 찾는다 
+
+왜냐하면 absolute children은  relative father이 있어야 작동가능하기때문
+
+그래서 father를 찾아서 position: relative;적어줘야됨 
