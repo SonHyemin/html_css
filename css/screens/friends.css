@@ -29,6 +29,10 @@
   from {
     opacity: 1;
   }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 #splash-screen {
   background-color: var(--yellow);
@@ -40,4 +44,6 @@
   justify-content: center;
   align-items: center;
   font-size: 130px;
+  animation: hidesplashscreen 0.4s ease-in-out forwards;
+  animation-delay: 1s;
 }

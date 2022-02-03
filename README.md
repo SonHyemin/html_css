@@ -394,3 +394,40 @@ display를 block 을한다
 }
 ```
 
+11. forwards  (애니메이션의 마지막 값을 계속 가지고있게해줌 )
+
+```css
+@keyframes hidesplashscreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+#splash-screen {
+  background-color: var(--yellow);
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 130px;
+  animation: hidesplashscreen 1s ease-in-out forwards;
+}
+```
+
+다시 처음상태로 돌아게하지않음 
+
+보통이런 효과로 요소를 숨길때는css 만으로는 부족하기때문에 JavaScript를 사용해야한다 
+
+11-1.  animation-delay: 
+
+```css
+  animation-delay: 1s;
+```
+
+애니메이션의 시작을 지연시켜준다
