@@ -326,3 +326,29 @@ nav__notification 와 badge 이다
 왜냐하면 absolute children은  relative father이 있어야 작동가능하기때문
 
 그래서 father를 찾아서 position: relative;적어줘야됨 
+
+6. z-index (layer 순서이다)
+
+```css
+#chat-screen .alt-header {
+  top: 10px;
+  z-index: 1;
+}
+```
+
+ position: fixed;  이라서 적용가능했다 기본값은 0이다.
+
+7.  flex-direction: column;
+
+```css
+.main-chat {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+```
+
+이때 기준은 세로축이고  cross axis 는 수평이된다
+
+ align-items: center; 중앙정렬을 하면 가운데로 옴
