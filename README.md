@@ -352,3 +352,45 @@ nav__notification 와 badge 이다
 이때 기준은 세로축이고  cross axis 는 수평이된다
 
  align-items: center; 중앙정렬을 하면 가운데로 옴
+
+8. span 일때 margin주는법
+
+```css
+.message__author {
+  opacity: 0.8;
+  font-size: 15px;
+  margin-bottom: 10px;
+  display: block;
+}
+```
+
+display를 block 을한다 
+
+9.  order  (flex childer에게만 적용이된다)
+
+```css
+.message-row--own .message__time {
+  order: 0;
+}
+.message-row--own .message__bubble {
+  order: 1;
+}
+```
+
+9-1  flex-direction (modifier기준으로 뒤집을수있다)
+
+```css
+.message-row--own .message__info {
+  flex-direction: row-reverse;
+}
+```
+
+10. justify-content (수평으로 작동)
+
+```css
+.message-row--own {
+  display: flex;
+  justify-content: flex-end;
+}
+```
+
