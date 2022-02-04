@@ -431,3 +431,14 @@ display를 block 을한다
 ```
 
 애니메이션의 시작을 지연시켜준다
+
+12. will-change
+
+```css
+.open-post__heart-count:hover i {
+  will-change: transform;
+  animation: heartbeat 1s linear infinite;
+}
+```
+
+브라우저에게 어떤 것이 변할 것인지 말해주고 일종의 브라우저에게 렌더링 힌트를 주면서 도와주는 역할임 (이게 없으면 애니메이션 효과는 불안정하게 흔들림)

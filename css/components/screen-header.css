@@ -19,6 +19,17 @@
   height: 5px;
   border-radius: 50%;
 }
+@keyframes rotatecog {
+  from {
+    transform: NONE;
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+.screen-header__icons .fa-cog:hover {
+  animation: rotatecog 1s linear infinite;
+}
 
 .screen-header__dot {
   background-color: tomato;
