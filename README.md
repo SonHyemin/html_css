@@ -443,7 +443,9 @@ display를 block 을한다
 
 브라우저에게 어떤 것이 변할 것인지 말해주고 일종의 브라우저에게 렌더링 힌트를 주면서 도와주는 역할임 (이게 없으면 애니메이션 효과는 불안정하게 흔들림)
 
-13. branch
+## branch
+
+1. branch
 
 실험적인 코드나 다른 버전의 코드들을 따로 저장하고 싶다면 brach하면된다 
 
@@ -453,12 +455,17 @@ Git으로 클릭만으로 버전을 왔다갔다 할수있다
 
 main변경사항을 commit 무조건해주기 
 
-14. Brach->Merge into Current Branch
+2. Brach->Merge into Current Branch
 
 brach 이름을 클릭하고 파란색 창을 클릭하면 brach소스를 main으로 복사할수있다
 
-15. 
+3. 
 
 github에서 branch를 가지고 있으면 공짜로 Static호스팅을 할수있게 해줌(즉  누구나 자신의 웹사이트를 무료로 업로드 가능html/css/javascript만으로 이루어진 사이트이다 front-end만가능)
 
 조건: pubic저장소여야함, branch이름은 gh-pages이여야함
+
+4.github 수정해서 다시 올릴때
+
+main 에서 수정을하고  commit 하기-> gh-pages branch클릭-> 위에Branch탭클릭->update from main 클릭->push클릭
+
