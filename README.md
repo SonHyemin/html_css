@@ -467,5 +467,5 @@ github에서 branch를 가지고 있으면 공짜로 Static호스팅을 할수�
 
 4.github 수정해서 다시 올릴때
 
-main 에서 수정을하고  commit 하기-> gh-pages branch클릭-> 위에Branch탭클릭->update from main 클릭->push클릭
+main 에서 수정을하고  commit 하기-> push->gh-pages branch클릭-> 위에Branch탭클릭->update from main 클릭->push클릭
 
